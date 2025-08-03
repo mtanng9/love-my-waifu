@@ -2,6 +2,8 @@
 
 You “live a day” with a randomly generated anime waifu/husbando and are given fun things to do together.
 
+## Plan
+
 APIs:
 
 - Waifu.pics – random anime girl/boy images
@@ -16,3 +18,10 @@ Features:
 
 Later on add AI in order role playing API
 Link to web: https://github.com/public-apis/public-apis?tab=readme-ov-file
+
+## Technology
+
+Database: postgreSQL
+Language: Go
+UI: Components using Templ, HTMX for more reactive website
+UI Testing: Playwright
