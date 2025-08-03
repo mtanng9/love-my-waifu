@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/mtanng9/love-my-waifu/server"
 
 func main() {
-	fmt.Println("Hello World")
+	server.StartServer()
 }
