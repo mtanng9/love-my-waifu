@@ -1,9 +1,12 @@
 package server
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/mtanng9/love-my-waifu/templates"
 )
 
 const PORT = 8080
@@ -19,5 +22,6 @@ func StartServer() {
 }
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello World")
+	component := templates.Hello("Jose")
+	component.Render(context.TODO(), w)
 }
