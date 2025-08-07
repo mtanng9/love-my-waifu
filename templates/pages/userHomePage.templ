@@ -1,0 +1,20 @@
+package pages 
+
+import "github.com/mtanng9/love-my-waifu/templates/components"
+
+templ UserHomePage() {
+    <div>
+        <p>Hi, I'm the user home page</p>
+        @components.GenerateButton()
+    </div>
+
+    <div>
+        @components.WaifuBanner()
+    </div>
+
+    <div>
+        <p>New Waifu</p>
+        <p>New Activity</p>
+    </div>
+
+}

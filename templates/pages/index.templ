@@ -1,0 +1,21 @@
+package pages
+
+import "github.com/mtanng9/love-my-waifu/templates/components"
+
+
+templ Index() {
+    <div>
+        <h1>
+            Plan Your Day with a Waifu
+        </h1>
+
+        <h2>
+            Your Daily Anime Companion + Adventure Awaits!
+        </h2>
+
+        @components.GenerateButton()
+
+        @components.WaifuBanner()
+    </div>
+    
+}
