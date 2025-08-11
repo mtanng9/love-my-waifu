@@ -31,7 +31,7 @@ func Index() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><h1>Plan Your Day with a Waifu</h1><h2>Your Daily Anime Companion + Adventure Awaits!</h2>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"bg-[#fff0f6]\"><h1 class=\"flex justify-center text-[#c2255c] text-xl p-3 \">Plan Your Day with a Waifu</h1><h2 class=\"flex justify-center text-[#c2255c] py-4\">Your Daily Anime Companion + Adventure Awaits!</h2>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
