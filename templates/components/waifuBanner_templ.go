@@ -29,7 +29,7 @@ func WaifuBanner() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><img src=\"\" alt=\"Picture of Waifu\"><h2>Today's Plan - Activity</h2></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"flex flex-col p-6\"><img class=\"mx-130\" src=\"\" alt=\"Picture of Waifu\"><div class=\"bg-white p-4 mx-130 py-6\"><h2 class=\"flex justify-center text-[#868e96]\">Today's Plan</h2><h2 class=\"flex justify-center text-[#868e96]\">'Activity'</h2></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
