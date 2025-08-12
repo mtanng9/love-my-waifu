@@ -29,7 +29,7 @@ func SettingsPage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h1>Settings for User XXX</h1><div><h2>Change Password</h2><h2>Change UserName</h2><h2>Change Email Password</h2></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h1 class=\"flex justify-center text-[#c2255c] p-6 text-xl\">Settings for User XXX</h1><div class=\"flex flex-col text-white p-10 mx-120 bg-[#fcc2d7] border-solid border-[#f472b6] border-2\"><h2 class=\"flex justify-center py-6\">Change Password</h2><h2 class=\"flex justify-center py-6\">Change UserName</h2><h2 class=\"flex justify-center py-6\">Change Email Password</h2></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
