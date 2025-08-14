@@ -31,7 +31,7 @@ func UserHomePage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div><p>Hi, I'm the user home page</p>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"bg-[#fff0f6]\"><h1 class=\"flex justify-center text-[#c2255c] p-4\">Hello, User XXXX</h1>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -43,11 +43,11 @@ func UserHomePage() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.WaifuBanner(true).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</div><div><p>New Waifu</p><p>New Activity</p></div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</div><div class=\"flex flex-row flex justify-center p-3\"><p class=\"bg-[#e6fcf5] m-4 p-5 rounded-2xl border-1 border-[#96f2d7]\">New Waifu</p><p class=\"bg-[#fff9db] m-4 p-5 rounded-2xl border-1 border-[#ffec99]\">New Activity</p></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

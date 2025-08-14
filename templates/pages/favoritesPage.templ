@@ -3,9 +3,12 @@ package pages
 import "github.com/mtanng9/love-my-waifu/templates/components"
 
 templ FavoritesPage() {
-    <p>Favorites</p>
-    @components.WaifuBanner()
-    @components.WaifuBanner()
-    @components.WaifuBanner()
-    @components.WaifuBanner()
+    <h1 class="flex justify-center text-[#c2255c] p-4">Favorites</h1>
+    <div class="flex flex-wrap ">
+        @components.WaifuBanner(false)
+        @components.WaifuBanner(false)
+        @components.WaifuBanner(false)
+        @components.WaifuBanner(false)
+    </div>
+
 }

@@ -31,23 +31,27 @@ func FavoritesPage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<p>Favorites</p>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h1 class=\"flex justify-center text-[#c2255c] p-4\">Favorites</h1><div class=\"flex flex-wrap \">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner().Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

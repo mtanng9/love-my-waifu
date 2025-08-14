@@ -1,11 +1,19 @@
 package components 
 
-templ WaifuBanner() {
-    <div class="flex flex-col p-6">
-        <img class="mx-130" src="" alt="Picture of Waifu"> 
-        <div class="bg-white p-4 mx-130 py-6">
-            <h2 class="flex justify-center text-[#868e96]">Today's Plan</h2>
-            <h2 class="flex justify-center text-[#868e96]">'Activity'</h2>
+templ WaifuBanner(isHomePage bool) {
+    {{ var style string }}
+    if isHomePage {
+        {{ style = "flex flex-col w-1/2 p-2 absolute bottom-94 left-60" }}
+    } else {
+        {{ style = "flex flex-col w-1/2 p-2" }}
+    }
+        <div class={style}>
+            <img class="mx-130" src="" alt="Picture of Waifu"> 
+            <div class="bg-white p-4 mx-130 py-6">
+                <h2 class="flex justify-center text-[#868e96]">Today's Plan</h2>
+                <h2 class="flex justify-center text-[#868e96]">'Activity'</h2>
+            </div>
         </div>
-    </div>
 }
+
+

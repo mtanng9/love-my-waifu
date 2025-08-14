@@ -29,7 +29,7 @@ func GenerateButton() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"mx-135 bg-[#fff0f6] py-6\"><h1 class=\"flex justify-center text-white bg-[#f783ac] rounded-2xl p-3\">Generate My Day</h1></div><hr class=\"bg-[#f472b6] border-0 h-px\">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"mx-135 py-8\"><h1 class=\"flex justify-center text-white bg-[#f783ac] rounded-2xl p-3 border-1 border-[#c2255c]\">Generate My Day</h1></div><hr class=\"bg-[#f472b6] border-0 h-px\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

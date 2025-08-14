@@ -3,18 +3,20 @@ package pages
 import "github.com/mtanng9/love-my-waifu/templates/components"
 
 templ UserHomePage() {
-    <div>
-        <p>Hi, I'm the user home page</p>
+    <div class="bg-[#fff0f6]">
+        <h1 class="flex justify-center text-[#c2255c] p-4">Hello, User XXXX</h1>
         @components.GenerateButton()
     </div>
 
     <div>
-        @components.WaifuBanner()
+        @components.WaifuBanner(true)
     </div>
 
-    <div>
-        <p>New Waifu</p>
-        <p>New Activity</p>
+    <div class="flex flex-row flex justify-center p-3">
+        <p class="bg-[#e6fcf5] m-4 p-5 rounded-2xl border-1 border-[#96f2d7]">New Waifu</p>
+        <p class="bg-[#fff9db] m-4 p-5 rounded-2xl border-1 border-[#ffec99]">New Activity</p>
     </div>
+
+
 
 }

@@ -8,8 +8,6 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/mtanng9/love-my-waifu/templates/components"
-
 func SettingsPage() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -32,10 +30,6 @@ func SettingsPage() templ.Component {
 		}
 		ctx = templ.ClearChildren(ctx)
 		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h1 class=\"flex justify-center text-[#c2255c] p-6 text-xl\">Settings for User XXX</h1><div class=\"flex flex-col text-white p-10 mx-120 bg-[#fcc2d7] border-solid border-[#f472b6] border-2\"><h2 class=\"flex justify-center py-6\">Change Password</h2><h2 class=\"flex justify-center py-6\">Change UserName</h2><h2 class=\"flex justify-center py-6\">Change Email Password</h2></div>")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = components.Footer().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
