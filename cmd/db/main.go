@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mtanng9/love-my-waifu/db"
+import "github.com/mtanng9/love-my-waifu/internal/db"
 
 func main() {
 	database := db.DB{}

@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/mtanng9/love-my-waifu/templates/layouts"
-	"github.com/mtanng9/love-my-waifu/templates/pages"
+	"github.com/mtanng9/love-my-waifu/internal/templates/layouts"
+	"github.com/mtanng9/love-my-waifu/internal/templates/pages"
 )
 
 const PORT = 8080

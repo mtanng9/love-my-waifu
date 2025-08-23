@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/mtanng9/love-my-waifu/db"
-	"github.com/mtanng9/love-my-waifu/server"
+	"github.com/mtanng9/love-my-waifu/internal/db"
+	"github.com/mtanng9/love-my-waifu/internal/server"
 )
 
 func main() {

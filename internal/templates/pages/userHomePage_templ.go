@@ -8,9 +8,9 @@ package pages
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-import "github.com/mtanng9/love-my-waifu/templates/components"
+import "github.com/mtanng9/love-my-waifu/internal/templates/components"
 
-func FavoritesPage() templ.Component {
+func UserHomePage() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -31,27 +31,23 @@ func FavoritesPage() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<h1 class=\"flex justify-center text-[#c2255c] p-4\">Favorites</h1><div class=\"flex flex-wrap \">")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<div class=\"bg-[#fff0f6]\"><h1 class=\"flex justify-center text-[#c2255c] p-4\">Hello, User XXXX</h1>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.GenerateButton().Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div><div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = components.WaifuBanner(true).Render(ctx, templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = components.WaifuBanner(false).Render(ctx, templ_7745c5c3_Buffer)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</div><div class=\"flex flex-row flex justify-center p-3\"><p class=\"bg-[#e6fcf5] m-4 p-5 rounded-2xl border-1 border-[#96f2d7]\">New Waifu</p><p class=\"bg-[#fff9db] m-4 p-5 rounded-2xl border-1 border-[#ffec99]\">New Activity</p></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
