@@ -1,3 +1,5 @@
+-- +goose Up
+-- +goose StatementBegin
 CREATE TABLE users (
     id BIGSERIAL PRIMARY KEY, 
     displayName text, 
@@ -49,6 +51,22 @@ CREATE TABLE favorites (
     createdDate timestamp, 
     updatedDate timestamp
 );
+-- +goose StatementEnd
+
+-- +goose Down
+-- +goose StatementBegin
+DROP TABLE users;
+DROP TABLE userSettings;
+DROP TABLE waifus;
+DROP TABLE activeWaifus;
+DROP TABLE activities;
+DROP TABLE favorites;
+-- +goose StatementEnd
+
+
+
+
+
 
 
 
