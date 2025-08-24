@@ -4,15 +4,26 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"log/slog"
 	"net/http"
+	"os"
 
+	"github.com/jackc/pgx/v5"
+	"github.com/mtanng9/love-my-waifu/internal/db"
 	"github.com/mtanng9/love-my-waifu/internal/templates/layouts"
 	"github.com/mtanng9/love-my-waifu/internal/templates/pages"
 )
 
 const PORT = 8080
 
-func StartServer() {
+type AppConfig struct {
+	Db       *pgx.Conn
+	Queries  *db.Queries
+	Logger   *slog.Logger
+	ErrorLog *log.Logger
+}
+
+func StartServer(app AppConfig) {
 	//allocate and start instantiate a new server mux
 	mux := http.NewServeMux()
 
@@ -26,8 +37,15 @@ func StartServer() {
 	mux.HandleFunc("GET /login", handleLogIn)
 	mux.HandleFunc("GET /signup", handleSignUp)
 
-	fmt.Printf("Starting Server on PORT: %d", PORT)
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", PORT), mux))
+	app.Logger.Info("server started", "addr", PORT)
+	srv := http.Server{
+		Addr:     fmt.Sprintf(":%d", PORT),
+		Handler:  app.logRequest(mux),
+		ErrorLog: app.ErrorLog,
+	}
+	err := srv.ListenAndServe()
+	app.Logger.Error(err.Error())
+	os.Exit(1)
 }
 
 func handleIndex(w http.ResponseWriter, r *http.Request) {
